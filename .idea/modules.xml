@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/court/src/main/court.iml" filepath="$PROJECT_DIR$/court/src/main/court.iml" />
+      <module fileurl="file://$PROJECT_DIR$/court/src/test/court_test.iml" filepath="$PROJECT_DIR$/court/src/test/court_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/market/src/main/market.iml" filepath="$PROJECT_DIR$/market/src/main/market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/market/src/test/test_market.iml" filepath="$PROJECT_DIR$/market/src/test/test_market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trace/src/main/trace.iml" filepath="$PROJECT_DIR$/trace/src/main/trace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trace/src/test/trace_test.iml" filepath="$PROJECT_DIR$/trace/src/test/trace_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/users/src/main/users.iml" filepath="$PROJECT_DIR$/users/src/main/users.iml" />
+      <module fileurl="file://$PROJECT_DIR$/users/src/test/users_test.iml" filepath="$PROJECT_DIR$/users/src/test/users_test.iml" />
+    </modules>
+  </component>
+</project>

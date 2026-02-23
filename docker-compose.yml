@@ -1,0 +1,34 @@
+services:
+  dbusers:
+    build:
+      context: ./dbusers
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DBUSERS_ROOT_PASSWORD}
+      MYSQL_DATABASE: dbusers
+
+      APP_DB_USER: appuser
+      APP_DB_PASSWORD: ${DBUSERS_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - type: bind
+        source: ./dbusers/volume
+        target: /var/lib/mysql
+
+  dbmarket:
+    build:
+      context: ./dbmarket
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DBMARKET_ROOT_PASSWORD}
+      MYSQL_DATABASE: dbmarket
+
+      APP_DB_USER: appuser
+      APP_DB_PASSWORD: ${DBMARKET_PASSWORD}
+    ports:
+      - "3308:3306"
+    volumes:
+      - type: bind
+        source: ./dbmarket/volume
+        target: /var/lib/mysql
+
+# docker compose --env-file .env up -d
