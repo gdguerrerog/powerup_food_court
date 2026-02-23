@@ -8,8 +8,8 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource(value = "file:../.env", ignoreResourceNotFound = true)
 public class UsersApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UsersApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UsersApplication.class, args);
+    }
 
 }
