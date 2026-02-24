@@ -4,7 +4,9 @@
  */
 package pragmafoodcourt.users.infrastructure.input.rest;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -36,28 +38,33 @@ public class UserRestController {
     
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Create a user")
     public UserResponse createUser(@RequestBody @Valid UserRequest request) {
         return userHandler.saveUser(request);
     }  
     
     @GetMapping("")
+    @Operation(summary = "Get all users")
     public List<UserResponse> getAllUsers() {
         return userHandler.getAllUsers();
     }
     
     @GetMapping("/{document}")
-    public UserResponse getUserByDocumentNumber(@PathVariable("document") String document) {
+    @Operation(summary = "Get user by document")
+    public UserResponse getUserByDocumentNumber(@PathVariable("document") @Pattern(regexp = UserRequest.DOCUMENT_PATTERN) String document) {
         return userHandler.getUserByDocumentNumber(document);
     }
     
     @PutMapping("")
-    public UserResponse getAllUsers(@RequestBody UserRequest request) {
+    @Operation(summary = "Update user")
+    public UserResponse updateUser(@RequestBody @Valid UserRequest request) {
         return userHandler.updateUser(request);
     }
     
     @DeleteMapping("/{document}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteUser(@PathVariable("document") String document) {
+    @Operation(summary = "Delete user by document")
+    public void deleteUser(@PathVariable("document") @Pattern(regexp = UserRequest.DOCUMENT_PATTERN) String document) {
         userHandler.deleteUserByDocumentNumber(document);
     }
    

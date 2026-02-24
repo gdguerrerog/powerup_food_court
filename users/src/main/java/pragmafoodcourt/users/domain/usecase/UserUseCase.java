@@ -5,7 +5,6 @@
 package pragmafoodcourt.users.domain.usecase;
 
 import java.util.List;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import pragmafoodcourt.users.domain.api.IUserServicePort;
 import pragmafoodcourt.users.domain.model.User;

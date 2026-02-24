@@ -4,7 +4,7 @@
  */
 package pragmafoodcourt.users.application.dto;
 
-import java.time.Instant;
+import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
 import pragmafoodcourt.users.domain.model.Role;
@@ -20,7 +20,7 @@ public class UserResponse {
     private String lastName;
     private String documentNumber;
     private String phoneNumber;
-    private Instant birthDate;
+    private LocalDate birthDate;
     private String email;
     private Role role;
 }

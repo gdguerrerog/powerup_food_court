@@ -15,5 +15,5 @@ import pragmafoodcourt.users.domain.model.User;
  */
 @Mapper(componentModel = "spring", unmappedSourcePolicy = ReportingPolicy.IGNORE, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserRequestMapper {
-    User toUser(UserRequest request);    
+    User toUser(UserRequest request);
 }

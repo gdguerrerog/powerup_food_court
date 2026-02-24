@@ -5,8 +5,7 @@
 
 package pragmafoodcourt.users.domain.model;
 
-import java.time.Instant;
-import java.util.Optional;
+import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +22,7 @@ public class User {
     private String lastName;
     private String documentNumber;
     private String phoneNumber;
-    private Instant birthDate;
+    private LocalDate birthDate;
     private String email;
     private String password;
     private Role role;

@@ -59,7 +59,7 @@ public class UserJpaAdapter implements IUserPersistencePort {
 
     @Override
     public void deleteUserByDocumentNumber(String doc) {
-        userRepository.deleteUserByDocumentNumber(doc);
+        userRepository.deleteByDocumentNumber(doc);
     }
     
 }

@@ -10,7 +10,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.time.Instant;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +35,7 @@ public class UserEntity {
     private String lastName;
     private String documentNumber;
     private String phoneNumber;
-    private Instant birthDate;
+    private LocalDate birthDate;
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)

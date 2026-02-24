@@ -4,6 +4,7 @@
  */
 package pragmafoodcourt.users.infrastructure.output.jpa.repository;
 
+import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import pragmafoodcourt.users.infrastructure.output.jpa.entity.UserEntity;
@@ -13,6 +14,8 @@ import pragmafoodcourt.users.infrastructure.output.jpa.entity.UserEntity;
  * @author German at CLEZ
  */
 public interface IUserRepository extends JpaRepository<UserEntity, Long> {
-    Optional<UserEntity> findByDocumentNumber(String documentNumber);    
-    void deleteUserByDocumentNumber(String documentNumber);    
+    Optional<UserEntity> findByDocumentNumber(String documentNumber);
+    
+    @Transactional
+    void deleteByDocumentNumber(String documentNumber);    
 }
